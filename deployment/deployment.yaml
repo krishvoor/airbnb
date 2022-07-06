@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: airbnb-webserver 
+spec:
+  selector:
+    matchLabels:
+      app: airbnb-webserver
+  template:
+    metadata:
+      labels:
+        app: airbnb-webserver
+    spec:
+      containers:
+      - name: airbnb-webserver
+        image: quay.io/harsha544/airbnb:webserver
+        imagePullPolicy: IfNotPresent
+        resources: {}
+        ports:
+        - containerPort: 8080
