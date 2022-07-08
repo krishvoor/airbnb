@@ -15,7 +15,7 @@ spec:
       containers:
       - name: airbnb-webserver
         image: quay.io/krvoora/airbnb:latest
-        imagePullPolicy: IfNotPresent
+        imagePullPolicy: Always
         resources: {}
         ports:
         - containerPort: 8080

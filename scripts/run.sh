@@ -5,6 +5,7 @@ rm -rf /var/log/mongodb/mongod.log
 
 # Update perm.
 cd /data/db/
+chown -R $USER /data/db
 chmod -R 777 /data/db/
 
 # Start the MongoDB deamon
