@@ -11,9 +11,10 @@ spec:
       labels:
         app: airbnb-webserver
     spec:
+#      runtimeClassName: kata-containers
       containers:
       - name: airbnb-webserver
-        image: quay.io/harsha544/airbnb:webserver
+        image: quay.io/krvoora/airbnb:latest
         imagePullPolicy: IfNotPresent
         resources: {}
         ports:
