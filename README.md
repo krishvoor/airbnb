@@ -1,6 +1,6 @@
 ## Introduction
 
-This document describes how to deploy a cloud-native application on Openshift Container Platform, expose its endpoints to simulate user(s)querying nearest vacation/ workation or staycation properties.
+This document describes how to deploy a cloud-native application on Openshift Container Platform, expose its endpoints to simulate user(s) querying nearest vacation/ workation or staycation properties.
 
 ## Prerequisites
 

@@ -3,6 +3,8 @@ FROM docker.io/mongo:latest
 RUN apt-get update \
     && apt-get install npm -y
 
+WORKDIR /install/
+
 # Staging area
 COPY scripts /install/
 
