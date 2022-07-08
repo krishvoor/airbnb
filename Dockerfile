@@ -15,4 +15,5 @@ RUN /install/fix_perm.sh
 USER mongodb
 
 EXPOSE 8080
+VOLUME ["/data/db"]
 ENTRYPOINT  ["/bin/bash","-c","/install/run.sh"]
