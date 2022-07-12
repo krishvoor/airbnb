@@ -13,26 +13,25 @@ This document describes how to deploy a cloud-native application on Openshift Co
 Create a New Project
 
 ```
-    export NAMESPACE=perfscale
-    oc new-project $NAMESPACE
+export NAMESPACE=perfscale
+oc new-project $NAMESPACE
 ```
 
 Git clone project
 
 ```
-    git clone https://github.com/krishvoor/airbnb
-    cd airbnb/deployment
+git clone https://github.com/krishvoor/airbnb
+cd airbnb/deployment
 ```
 
-Deploy the app
+Deploy the application
 
 ```
-    oc create -f service.yaml
-    oc create -f deployment.yaml
+oc create -f deployment.yaml
 ```
 
-Expose the app
+This should expose your route as well, to validate perform
 
 ```
-    oc create -f route.yaml
+oc get route
 ```

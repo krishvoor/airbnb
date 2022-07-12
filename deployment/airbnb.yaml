@@ -63,5 +63,7 @@ spec:
   to:
     kind: Service
     name: airbnb-webserver
+  port:
+    targetPort: 8080
   tls:
      termination: edge
