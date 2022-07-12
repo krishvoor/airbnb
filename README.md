@@ -1,3 +1,4 @@
+[![Docker Repository on Quay](https://quay.io/repository/krvoora/airbnb/status "Docker Repository on Quay")](https://quay.io/repository/krvoora/airbnb)
 ## Introduction
 
 This document describes how to deploy a cloud-native application on Openshift Container Platform, expose its endpoints to simulate user(s) querying nearest vacation/ workation or staycation properties.
