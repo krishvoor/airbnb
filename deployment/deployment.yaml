@@ -1,3 +1,36 @@
+apiVersion: security.openshift.io/v1
+kind: SecurityContextConstraints
+metadata:
+  name: scc-admin
+allowPrivilegedContainer: false
+runAsUser:
+  type: RunAsAny
+seLinuxContext:
+  type: RunAsAny
+fsGroup:
+  type: RunAsAny
+supplementalGroups:
+  type: RunAsAny
+users:
+- mongodb
+groups:
+- mongodb
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: airbnb-webserver
+spec:
+  selector:
+    app: airbnb-webserver
+  ports:
+  - port: 8080
+    targetPort: 8080
+
+---
+
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -19,3 +52,16 @@ spec:
         resources: {}
         ports:
         - containerPort: 8080
+
+---
+
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  name: airbnb-route
+spec:
+  to:
+    kind: Service
+    name: airbnb-webserver
+  tls:
+     termination: edge
