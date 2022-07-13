@@ -28,7 +28,7 @@ cd airbnb/deployment
 Deploy the application
 
 ```
-oc create -f deployment.yaml
+oc create -f airbnb.yaml
 ```
 
 This should expose your route as well, to validate perform
