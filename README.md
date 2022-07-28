@@ -56,22 +56,6 @@ This is how a document in Listing collection would look like
   }
 ```
 
-This is how a document in Reviews collection would look like
-
-```  
-{
-    "_id": {
-      "$oid": "62cd3df24a35217acb0dd3c2"
-    },
-    "listing_id": 23726706,
-    "id": 248833758,
-    "date": "2018-04-01",
-    "reviewer_id": 155953524,
-    "reviewer_name": "Ayme",
-    "comments": "Una Excelente estancia en casa de Patricia y su esposo Dik ! <br/>La casa está muy limpia , bien comunicada con el transporte público y el desayuno muy rico.<br/>Patricia y Dik nos ayudaron en todo lo que ocupamos y el primer día fueron por nosotros a la central del metro.<br/>Sin duda alguna regresaría y lo recomiendo plenamente !!"
-  }
-  ```
-
 
 This is how a document in Listing collection would look like
 

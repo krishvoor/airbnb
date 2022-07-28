@@ -13,13 +13,11 @@ sleep 15
 cd /install/
 gunzip listings.csv.gz
 gunzip calendar.csv.gz
-gunzip reviews.csv.gz
 
 # Import the datasets
 cd /install/
 mongoimport --uri="mongodb://0.0.0.0:27017/airbnb" -c listings --type csv --headerline --drop /install/listings.csv
 mongoimport --uri="mongodb://0.0.0.0:27017/airbnb" -c calendar --type csv --headerline --drop /install/calendar.csv
-mongoimport --uri="mongodb://0.0.0.0:27017/airbnb" -c reviews --type csv --headerline --drop /install/reviews.csv
 
 # Run temp http-server
 npm install http-server
